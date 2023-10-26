@@ -13,11 +13,32 @@ class Matrix{
         }
     }
 
+    //將feedforward要接收的input層資料從array轉成matrix
+    static fromArray(arr){
+        //列數基於input array的長度，行數則為1行
+        let m = new Matrix(arr.length, 1);
+        for(let i=0; i<arr.length; i++){
+            m.data[i][0] = arr[i];
+        }
+        return m;
+    }
+
+    //將matrix轉成array
+    toArray(){
+        let arr = [];
+        for(let i=0; i<this.rows; i++){
+            for(let j=0; j<this.cols; j++){
+                arr.push(this.data[i][j]);
+            }
+        }
+        return arr;
+    }
+
     //給矩陣每個元素給予隨機數字
     randomize(){
         for(let i=0; i<this.rows; i++){
             for(let j=0; j<this.cols; j++){
-                this.data[i][j] = Math.floor(Math.random()*10);
+                this.data[i][j] = Math.random() * 2 - 1;
             }
         }
     }
@@ -84,9 +105,8 @@ class Matrix{
         }
     }
 
-    //map function
+    //map function：將某個function對矩陣中的所有元素作用
     map(func){
-        //將某個function對矩陣中的所有元素作用
         for(let i=0; i<this.rows; i++){
             for(let j=0; j<this.cols; j++){
                 let val = this.data[i][j];
