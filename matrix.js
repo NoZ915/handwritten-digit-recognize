@@ -43,6 +43,17 @@ class Matrix{
         }
     }
 
+    //矩陣加減的函式：矩陣相減
+    static subtract(a, b){
+        let result = new Matrix(a.rows, b.cols);
+        for(let i=0; i<result.rows; i++){
+            for(let j=0; j<result.cols; j++){
+                result.data[i][j] = a.data[i][j] - b.data[i][j];
+            }
+        }
+        return result;
+    }
+
     //矩陣加法的函式
     add(n){
         if(n instanceof Matrix){
@@ -62,13 +73,13 @@ class Matrix{
     }
 
     //矩陣轉置 transpose matrix
-    transpose(){
+    static transpose(matrix){
         //轉置就是矩陣的列跟行交換
         //先宣告一個result變數，作為一個Matrix的實體，其行與列的數量與原先相反
-        let result = new Matrix(this.cols, this.rows);
-        for(let i=0; i<this.rows; i++){
-            for(let j=0; j<this.cols; j++){
-                result.data[j][i] = this.data[i][j];
+        let result = new Matrix(matrix.cols, matrix.rows);
+        for(let i=0; i<matrix.rows; i++){
+            for(let j=0; j<matrix.cols; j++){
+                result.data[j][i] = matrix.data[i][j];
             }
         }
         return result;
@@ -97,12 +108,35 @@ class Matrix{
     }
 
     //矩陣乘法的函式：矩陣與純量相乘
-    multiply(n){
-        for(let i=0; i<this.rows; i++){
-            for(let j=0; j<this.cols; j++){
-                this.data[i][j] *= n
+    multiply(n) {
+        if (n instanceof Matrix) {
+            for(let i=0; i<this.rows; i++){
+                for(let j=0; j<this.cols; j++){
+                    // console.table(this.data);
+                    // console.table(n.data);
+                    this.data[i][j] *= n.data[i][j];
+                }
+            }
+        } else {
+            // Scalar product
+            for(let i=0; i<this.rows; i++){
+                for(let j=0; j<this.cols; j++){
+                    this.data[i][j] *= n
+                }
             }
         }
+    }
+
+    //static map function
+    static map(matrix, func){
+        let result = new Matrix(matrix.rows, matrix.cols);
+        for(let i=0; i<matrix.rows; i++){
+            for(let j=0; j<matrix.cols; j++){
+                let val = matrix.data[i][j];
+                result.data[i][j] = func(val);
+            }
+        }
+        return result;
     }
 
     //map function：將某個function對矩陣中的所有元素作用
