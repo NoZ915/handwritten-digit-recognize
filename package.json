@@ -1,0 +1,25 @@
+{
+  "name": "handwritten-digit-recognize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "XOR_sketch.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoZ915/handwritten-digit-recognize.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoZ915/handwritten-digit-recognize/issues"
+  },
+  "homepage": "https://github.com/NoZ915/handwritten-digit-recognize#readme",
+  "dependencies": {
+    "async": "^3.2.4"
+  }
+}
