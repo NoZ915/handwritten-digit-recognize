@@ -1,0 +1,8 @@
+.correct{
+    font-size: 64pt;
+    color: #00CC00;
+}
+.wrong{
+    font-size: 64pt;
+    color: #CC0000;
+}

@@ -5,12 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    
+    <!-- <script src="./libraries/p5.min.js"></script> -->
+    <!-- <script src="./libraries/p5.dom.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
     <script src="./lib/nn.js"></script>
     <script src="./lib/matrix.js"></script>
     <script src="./mnist.js"></script>
     <script src="./sketch.js"></script>
+	
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+	<div id="container"></div>
+
+	<p id="info">
+		Label: <span class="stuff" id="label"></span><br/>
+		電腦猜測：<span class="stuff" id="guess"></span><br/>
+		<br/>
+		Testing: <span id="percent"></span><br/>
+		<br/>
+		使用者猜測：<span id="user_guess"></span>
+	</p>
+
+	<div>
+		0<div id="0"></div>
+		1<div id="1"></div>
+		2<div id="2"></div>
+		3<div id="3"></div>
+		4<div id="4"></div>
+		5<div id="5"></div>
+		6<div id="6"></div>
+		7<div id="7"></div>
+		8<div id="8"></div>
+		9<div id="9"></div>
+	</div>
 </body>
 </html>
