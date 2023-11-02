@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <!-- <script src="./libraries/p5.min.js"></script> -->
-    <!-- <script src="./libraries/p5.dom.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
-    <script src="./lib/nn.js"></script>
-    <script src="./lib/matrix.js"></script>
-    <script src="./mnist.js"></script>
-    <script src="./sketch.js"></script>
-	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!-- <script src="./libraries/p5.min.js"></script> -->
+	<!-- <script src="./libraries/p5.dom.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+	<script src="./lib/nn.js"></script>
+	<script src="./lib/matrix.js"></script>
+	<script src="./mnist.js"></script>
+	<script src="./sketch.js"></script>
+
 	<link rel="stylesheet" href="./main.css">
 </head>
+
 <body>
 	<div id="container"></div>
 
 	<p id="info">
-		Label: <span class="stuff" id="label"></span><br/>
-		電腦猜測：<span class="stuff" id="guess"></span><br/>
-		<br/>
-		Testing: <span id="percent"></span><br/>
-		<br/>
-		使用者猜測：<span id="user_guess"></span>
+		Label: <span class="stuff" id="label"></span><br />
+		guess: <span class="stuff" id="guess"></span><br />
+		正確率：<span class="stuff" id="training_correct"></span><br />
+		<br />
+		測試集正確率：<span id="percent"></span><br />
+		<br />
+		猜測使用者輸入數字為：<span id="user_guess"></span>
 	</p>
 
 	<div>
@@ -41,4 +44,5 @@
 		9<div id="9"></div>
 	</div>
 </body>
+
 </html>

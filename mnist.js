@@ -3,7 +3,7 @@ function loadMNIST(callback) {
     let files = {
         train_images: 'train-images.idx3-ubyte',
         train_labels: 'train-labels.idx1-ubyte',
-        test_images: 'train-images.idx3-ubyte',
+        test_images: 't10k-images.idx3-ubyte',
         test_labels: 't10k-labels.idx1-ubyte',
     };
     return Promise.all(Object.keys(files).map(async file => {
@@ -20,11 +20,11 @@ async function loadFile(file) {
 
     // Get file type from the magic number
     let type, dataLength;
-    if(headers[0] == 2049) {
+    if (headers[0] == 2049) {
         type = 'label';
         dataLength = 1;
         headerCount = 2;
-    } else if(headers[0] == 2051) {
+    } else if (headers[0] == 2051) {
         type = 'image';
         dataLength = headers[2] * headers[3];
     } else {
@@ -32,10 +32,10 @@ async function loadFile(file) {
     }
 
     let data = new Uint8Array(buffer, headerCount * 4);
-    if(type == 'image') {
+    if (type == 'image') {
         dataArr = [];
-        for(let i = 0; i < headers[1]; i++) {
-        dataArr.push(data.subarray(dataLength * i, dataLength * (i + 1)));
+        for (let i = 0; i < headers[1]; i++) {
+            dataArr.push(data.subarray(dataLength * i, dataLength * (i + 1)));
         }
         return dataArr;
     }

@@ -1,8 +1,11 @@
-.correct{
-    font-size: 64pt;
+body {
+    font-size: 30pt;
+}
+
+.correct {
     color: #00CC00;
 }
-.wrong{
-    font-size: 64pt;
+
+.wrong {
     color: #CC0000;
 }
