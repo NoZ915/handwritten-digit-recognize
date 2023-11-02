@@ -131,7 +131,7 @@ function guessUserDigit() {
     let guess = findMax(prediction);
     select("#user_guess").html(guess);
     for (let j = 0; j < 10; j++) {
-        select(`[id='${j}']`).html(prediction[j]);
+        select(`[id='${j}']`).style("height", `${Math.floor(prediction[j] * 400)}px`);
     }
 
     return img;
@@ -155,7 +155,6 @@ function draw() {
             testing();
         }
     }
-
 
     //使用者畫布&畫筆
     image(user_digit, 0, 0);

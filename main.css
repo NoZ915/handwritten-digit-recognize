@@ -1,5 +1,26 @@
+* {
+    /* border: black 1px solid; */
+    font-family: "Noto Sans TC", sans-serif
+}
+
+html,
 body {
-    font-size: 30pt;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    padding: 70px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgb(31, 31, 31);
+
+    font-size: 25px;
 }
 
 .correct {
@@ -8,4 +29,103 @@ body {
 
 .wrong {
     color: #CC0000;
+}
+
+
+.panels {
+    display: flex;
+    width: 100%;
+}
+
+.panel {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgb(247, 247, 247);
+    flex: 4;
+}
+
+.yellow {
+    background-color: #FFB637;
+}
+
+#container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.warningMessage {
+    margin-top: 10px;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.warningMessage p {
+    margin: 0;
+}
+
+.warning {
+    color: #c00d0d;
+}
+
+#info {
+    margin-top: 20px;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+#info div {
+    margin-top: 10px;
+}
+
+#info div span {
+    margin-left: 10px;
+}
+
+
+/* 黃色pannel右半部 */
+.guessingPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guessingPart img {
+    width: 300px;
+}
+
+.guessingPart div {
+    border-radius: 20px;
+    padding: 30px 40px;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+}
+
+#user_guess {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.barChart {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 75%;
+}
+
+.barChart div {
+    margin-left: 10px;
+}
+
+.barNumber {
+    text-align: center;
+}
+
+.bar {
+    border: black 1px solid;
+    width: 40px;
+    background-color: black;
 }
