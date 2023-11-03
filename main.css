@@ -1,5 +1,5 @@
 * {
-    /* border: black 1px solid;  */
+    /* border: black 1px solid; */
     font-family: "Noto Sans TC", sans-serif
 }
 
@@ -53,6 +53,31 @@ body {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+}
+
+#container div {
+    display: flex;
+    margin-top: 10px;
+}
+
+#container button {
+    cursor: pointer;
+    border: rgba(0, 204, 0, 0) 1px solid;
+    padding: 0 20px;
+    border-radius: 5px;
+    background-color: #FFB637;
+
+    font-size: 20px;
+}
+
+#container button:hover {
+    border: 1px black solid;
+    background-color: #fff;
+    color: black;
+}
+
+#container span {
+    margin-left: 10px;
 }
 
 .warningMessage {

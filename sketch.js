@@ -172,6 +172,9 @@ function keyPressed() {
         user_digit.background(0);
     }
 }
+function buttonClick() {
+    user_digit.background(0);
+}
 
 //用來找output陣列中最大的數值，並回傳該數值的index值
 function findMax(arr) {
