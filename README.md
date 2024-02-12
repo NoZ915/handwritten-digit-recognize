@@ -8,9 +8,7 @@
 ![image](./2024-02-12_14-07-07_.jpeg)
 
 ## 頁面說明
-<div style="color: #cc0000; margin-bottom: 10px">
-    網站載入後，需等候MNIST資料集載入的時間（自己測試約需一分半的時間），等待開始跑動後，手寫辨識系統才算開始運作。
-</div>
+網站載入後，需等候MNIST資料集載入的時間（自己測試約需一分半的時間），等待開始跑動後，手寫辨識系統才算開始運作。
 
 以下將依照上圖所標示之1.~6.做說明：
 1. 利用p5.js（為一個以JavaScript為基礎的繪圖函式庫），建立canvas，讓使用者可以在該canvas上作圖。
@@ -31,15 +29,17 @@ handwritten-digit-recognize
 └─ index.html
 ```
 
-1. **nn.js：神經網路系統**
-利用JS中的class定義一個建構器函式 NeuralNetwork( ) ，之後可以用new來呼叫該class。並且再定義兩個function：predict( )、train( ) ，所有NeuralNetwork物件實例都可以使用這兩個function。
-2. **matrix.js：各種矩陣的一般式**
-同樣利用class的方式建立建構式函式。
-先宣告建構式函式Matrix，並可傳入三個參數：rows, cols。
-3. **sketch.js：圖像處理**
-前面都是神經網路的邏輯，這邊就是用來處理手寫辨識的部分。主要處理的地方，就是把使用者寫的數字作轉換，以及讀取MNIST資料集處理之後，放入神經網路學習。
+1. **nn.js：神經網路系統**  
+    利用JS中的class定義一個建構器函式 NeuralNetwork( ) ，之後可以用new來呼叫該class。並且再定義兩個function：predict( )、train( ) ，所有NeuralNetwork物件實例都可以使用這兩個function。
+   
+2. **matrix.js：各種矩陣的一般式**  
+    同樣利用class的方式建立建構式函式。先宣告建構式函式Matrix，並可傳入三個參數：rows, cols。
+   
+3. **sketch.js：圖像處理**  
+    前面都是神經網路的邏輯，這邊就是用來處理手寫辨識的部分。主要處理的地方，就是把使用者寫的數字作轉換，以及讀取MNIST資料集處理之後，放入神經網路學習。
+   
 
-## 參考資料：
+## 參考資料
 1. [Coding Train - 10: Neural Networks - The Nature of Code](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh)
 2. [3Blue1Brown - Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 3. [Live Stream #120: MNIST and Pendulums](https://www.youtube.com/watch?v=KhogNPC24eI)
