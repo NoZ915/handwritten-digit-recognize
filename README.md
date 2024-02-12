@@ -2,7 +2,7 @@
 2023年下學期「機器學習」期中專題作業，使用原生JavaScript（ Without AI Framework）完成。
 1. [手寫辨識系統-操作網頁](https://noz915.github.io/handwritten-digit-recognize/)
 2. [手寫辨識系統-書面報告](https://docs.google.com/document/d/1rr5zYhyqjCPjA4YRM3auWU2gf8vIYx3rRjxAwBY7UhU/edit?usp=sharing)
-3. [手寫便是系統-Demo影片](https://www.youtube.com/watch?v=fKIbeqtwQpk)
+3. [手寫辨識系統-Demo影片](https://www.youtube.com/watch?v=fKIbeqtwQpk)
 
 ## 頁面
 ![image](./2024-02-12_14-07-07_.jpeg)
@@ -21,6 +21,7 @@
 6. 承 5. ，利用原生CSS刻出長條圖，將預測出來的陣列給視覺化。
 
 ## 主要架構
+```
 handwritten-digit-recognize
 ├─ lib
 │     ├─ nn.js
@@ -28,6 +29,7 @@ handwritten-digit-recognize
 ├─ sketch.js
 ├─ mnist.js
 └─ index.html
+```
 
 1. **nn.js：神經網路系統**
 利用JS中的class定義一個建構器函式 NeuralNetwork( ) ，之後可以用new來呼叫該class。並且再定義兩個function：predict( )、train( ) ，所有NeuralNetwork物件實例都可以使用這兩個function。
